@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5B52B7D0-EA4F-4654-AF8A-844DD8A7574D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A702E46-C608-4461-BB90-7D4784C01E7A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/GameViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "unarchiveFromFile(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5428C84-2CE3-49C9-94DD-915171937EC5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "372"
+            endingLineNumber = "372"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D5428C84-2CE3-49C9-94DD-915171937EC5 - c2faf8d5a5cf6aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "2587">
+               </Location>
+               <Location
+                  uuid = "D5428C84-2CE3-49C9-94DD-915171937EC5 - c2faf8d5a5cf68b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "372"
+                  endingLineNumber = "372"
+                  offsetFromSymbolStart = "2519">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B930A737-DE62-49BF-BEEF-A6ADFEDB8B56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "367"
+            endingLineNumber = "367"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "598DE74F-87C7-40C6-BB80-3803DFB1E31F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "366"
+            endingLineNumber = "366"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "598DE74F-87C7-40C6-BB80-3803DFB1E31F - c2faf8d5a5cf4d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "355"
+                  endingLineNumber = "355"
+                  offsetFromSymbolStart = "2062">
+               </Location>
+               <Location
+                  uuid = "598DE74F-87C7-40C6-BB80-3803DFB1E31F - c2faf8d5a5cf4d8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "355"
+                  endingLineNumber = "355"
+                  offsetFromSymbolStart = "1603">
+               </Location>
+               <Location
+                  uuid = "598DE74F-87C7-40C6-BB80-3803DFB1E31F - c2faf8d5a5cf439"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "354"
+                  endingLineNumber = "354"
+                  offsetFromSymbolStart = "1603">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B7D469AA-6022-49D3-8D20-8A3EF473D19C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "361"
+            endingLineNumber = "361"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "B7D469AA-6022-49D3-8D20-8A3EF473D19C - c2faf8d5a5cf5bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "350"
+                  endingLineNumber = "350"
+                  offsetFromSymbolStart = "1150">
+               </Location>
+               <Location
+                  uuid = "B7D469AA-6022-49D3-8D20-8A3EF473D19C - c2faf8d5a5cf5bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "350"
+                  endingLineNumber = "350"
+                  offsetFromSymbolStart = "621">
+               </Location>
+               <Location
+                  uuid = "B7D469AA-6022-49D3-8D20-8A3EF473D19C - c2faf8d5a5cf582"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "349"
+                  endingLineNumber = "349"
+                  offsetFromSymbolStart = "621">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C79CAF7-9A26-476D-99AF-3FE31150B598"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "generateRoomsGeometry(_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "6C79CAF7-9A26-476D-99AF-3FE31150B598 - 966047999c0a1889"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateRoomsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "208"
+                  endingLineNumber = "208"
+                  offsetFromSymbolStart = "1653">
+               </Location>
+               <Location
+                  uuid = "6C79CAF7-9A26-476D-99AF-3FE31150B598 - 966047999c0a18e8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateRoomsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "209"
+                  endingLineNumber = "209"
+                  offsetFromSymbolStart = "1217">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0A58B42-765E-40CA-89FC-C82FBA3295B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "generateCorners(_:_:_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "B0A58B42-765E-40CA-89FC-C82FBA3295B6 - 4e0cd5eb8f24f5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "B0A58B42-765E-40CA-89FC-C82FBA3295B6 - 90d932cc898b62b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "237"
+                  endingLineNumber = "237"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "B0A58B42-765E-40CA-89FC-C82FBA3295B6 - 90d932cc898b60c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "B0A58B42-765E-40CA-89FC-C82FBA3295B6 - 90d932cc898b9f05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "218"
+                  endingLineNumber = "218"
+                  offsetFromSymbolStart = "115">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5EA2CEB-A94B-462B-9385-D39646B88D1E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "generateCorners(_:_:_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "B5EA2CEB-A94B-462B-9385-D39646B88D1E - 4e0cd5eb8f24f5ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
+                  offsetFromSymbolStart = "260">
+               </Location>
+               <Location
+                  uuid = "B5EA2CEB-A94B-462B-9385-D39646B88D1E - 90d932cc898b6269"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "238"
+                  endingLineNumber = "238"
+                  offsetFromSymbolStart = "480">
+               </Location>
+               <Location
+                  uuid = "B5EA2CEB-A94B-462B-9385-D39646B88D1E - 90d932cc898b60c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "220"
+                  endingLineNumber = "220"
+                  offsetFromSymbolStart = "115">
+               </Location>
+               <Location
+                  uuid = "B5EA2CEB-A94B-462B-9385-D39646B88D1E - 90d932cc898b60e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "219"
+                  endingLineNumber = "219"
+                  offsetFromSymbolStart = "480">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52A728E4-E868-4FA4-99A2-9AFE8B053170"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
+            landmarkName = "generateCorners(_:_:_:)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "52A728E4-E868-4FA4-99A2-9AFE8B053170 - 4e0cd5eb8f24f58d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "241"
+                  endingLineNumber = "241"
+                  offsetFromSymbolStart = "1147">
+               </Location>
+               <Location
+                  uuid = "52A728E4-E868-4FA4-99A2-9AFE8B053170 - 90d932cc898b622b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "240"
+                  endingLineNumber = "240"
+                  offsetFromSymbolStart = "858">
+               </Location>
+               <Location
+                  uuid = "52A728E4-E868-4FA4-99A2-9AFE8B053170 - 90d932cc898b60a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "480">
+               </Location>
+               <Location
+                  uuid = "52A728E4-E868-4FA4-99A2-9AFE8B053170 - 90d932cc898b60a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorners(inout RogueLike.Room, Swift.Int, Swift.Int) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "221"
+                  endingLineNumber = "221"
+                  offsetFromSymbolStart = "858">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A13E8E7E-AB01-4A75-BE07-517CA76B90ED"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "A13E8E7E-AB01-4A75-BE07-517CA76B90ED - c2faf8d5a5cf6aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "2587">
+               </Location>
+               <Location
+                  uuid = "A13E8E7E-AB01-4A75-BE07-517CA76B90ED - c2faf8d5a5cf6aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "3475">
+               </Location>
+               <Location
+                  uuid = "A13E8E7E-AB01-4A75-BE07-517CA76B90ED - c2faf8d5a5cf6aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "373"
+                  endingLineNumber = "373"
+                  offsetFromSymbolStart = "3503">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D58EAE9-6B22-4DFB-8AA6-A31F088A6D21"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "368"
+            endingLineNumber = "368"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7D58EAE9-6B22-4DFB-8AA6-A31F088A6D21 - c2faf8d5a5cf49a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "357"
+                  endingLineNumber = "357"
+                  offsetFromSymbolStart = "2506">
+               </Location>
+               <Location
+                  uuid = "7D58EAE9-6B22-4DFB-8AA6-A31F088A6D21 - c2faf8d5a5cf49a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "357"
+                  endingLineNumber = "357"
+                  offsetFromSymbolStart = "2314">
+               </Location>
+               <Location
+                  uuid = "7D58EAE9-6B22-4DFB-8AA6-A31F088A6D21 - c2faf8d5a5cf4fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateTopToBottomCorridor(inout RogueLike.Dungeon, inout RogueLike.Room, inout RogueLike.Room, inout RogueLike.Corridor) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "356"
+                  endingLineNumber = "356"
+                  offsetFromSymbolStart = "2314">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92CE5AA5-95DA-4236-90F5-C9FB35835D55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "92CE5AA5-95DA-4236-90F5-C9FB35835D55 - 4e0cd5eb8f24f153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "267"
+                  endingLineNumber = "267"
+                  offsetFromSymbolStart = "5609">
+               </Location>
+               <Location
+                  uuid = "92CE5AA5-95DA-4236-90F5-C9FB35835D55 - 4e0cd5eb8f24f295"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "265"
+                  endingLineNumber = "265"
+                  offsetFromSymbolStart = "4476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A27C3159-A0F1-4388-A71D-FCC075852FC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "275"
+            endingLineNumber = "275"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "A27C3159-A0F1-4388-A71D-FCC075852FC7 - 4e0cd5eb8f24f008"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "5885">
+               </Location>
+               <Location
+                  uuid = "A27C3159-A0F1-4388-A71D-FCC075852FC7 - 4e0cd5eb8f24f02b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "5700">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BE233C2-D19F-4CF3-A80F-F710F04E8C37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "7BE233C2-D19F-4CF3-A80F-F710F04E8C37 - 4e0cd5eb8f24f18c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "272"
+                  endingLineNumber = "272"
+                  offsetFromSymbolStart = "5784">
+               </Location>
+               <Location
+                  uuid = "7BE233C2-D19F-4CF3-A80F-F710F04E8C37 - 4e0cd5eb8f24f18c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "272"
+                  endingLineNumber = "272"
+                  offsetFromSymbolStart = "5609">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47A3C146-DA6E-4700-B188-2BCAEB8E00EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "47A3C146-DA6E-4700-B188-2BCAEB8E00EB - 4e0cd5eb8f24f084"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "280"
+                  endingLineNumber = "280"
+                  offsetFromSymbolStart = "6106">
+               </Location>
+               <Location
+                  uuid = "47A3C146-DA6E-4700-B188-2BCAEB8E00EB - 4e0cd5eb8f24ff65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "5885">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3D06731-F9EC-4332-B76B-DD2FFE62D895"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "B3D06731-F9EC-4332-B76B-DD2FFE62D895 - 4e0cd5eb8f24ff65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "6158">
+               </Location>
+               <Location
+                  uuid = "B3D06731-F9EC-4332-B76B-DD2FFE62D895 - 4e0cd5eb8f24ff65"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "281"
+                  endingLineNumber = "281"
+                  offsetFromSymbolStart = "5885">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B270FC0E-801E-4DEA-8ABD-D949A4BEDF20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "B270FC0E-801E-4DEA-8ABD-D949A4BEDF20 - 4e0cd5eb8f24f0a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "279"
+                  endingLineNumber = "279"
+                  offsetFromSymbolStart = "5931">
+               </Location>
+               <Location
+                  uuid = "B270FC0E-801E-4DEA-8ABD-D949A4BEDF20 - 4e0cd5eb8f24f0a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RogueLike.generateCorridorsGeometry(inout RogueLike.Dungeon) -&gt; ()"
+                  moduleName = "RogueLike"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kristofs/Desktop/AP1_Sw_P01-1/src/RogueLike/RogueLike/DungeonGeneration.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "279"
+                  endingLineNumber = "279"
+                  offsetFromSymbolStart = "5876">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63F18344-1FE0-41E0-877C-B865A05926D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "generateSecondaryConnections(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
