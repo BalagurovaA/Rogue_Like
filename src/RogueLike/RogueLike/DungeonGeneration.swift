@@ -22,6 +22,8 @@ func generateDungeon(_ dungeon: inout Dungeon) {
 //    
 //    
     generateCorridorsGeometry(&dungeon)
+    
+
    
 }
 
@@ -78,6 +80,8 @@ func printSectors(_ dungeon: inout Dungeon) {
             }
         print()
     }
+    
+
 }
 //
 func printRoom(_ dungeon: inout Dungeon) {
@@ -207,7 +211,7 @@ func generateRoomsGeometry(_ dungeon: inout Dungeon) {
             if (dungeon.rooms[i][j].sector != UNINITIALIZED) {
 
                 generateCorners(&dungeon.rooms[i][j], (i - 1) * SECTOR_HEIGHT, (j - 1) * SECTOR_WIDTH)
-//                generateDoors(&dungeon.rooms[i][j])
+                generateDoors(&dungeon.rooms[i][j])
             }
         }
     }
@@ -264,10 +268,11 @@ func generateCorridorsGeometry(_ dungeon: inout Dungeon) {
             
             if currentRoom.connections[BOTTOM] != nil {
                 var bottomRoom = currentRoom.connections[BOTTOM]!
+  
+
                 var corridor = dungeon.corridors[dungeon.corridorsCount]
                 
-//                let gridIDiff = currentRoom.grid_i - bottomRoom.grid_i
-//                let gridJDiff = currentRoom.grid_j - bottomRoom.grid_j
+
                 
                 let gridIDiff = currentRoom.grid_i - bottomRoom.grid_i
                 let gridJDiff = currentRoom.grid_j - bottomRoom.grid_j
@@ -277,10 +282,13 @@ func generateCorridorsGeometry(_ dungeon: inout Dungeon) {
                 } else if gridIDiff == -1 && gridJDiff < 0 {
                     generateRightTurnCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
                 } else {
-//                    print("здесь должен был быть корридор номер комнаты текущей", currentRoom)
-                    generateTopToBottomCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
+
+
+                        generateTopToBottomCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
                 }
-                
+
+
+            
                 dungeon.corridors[dungeon.corridorsCount] = corridor
                 dungeon.corridorsCount += 1
             }
@@ -350,13 +358,78 @@ func generateRightTurnCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, 
     
 }
 
-func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomRoom: inout  Room, _ corridor: inout Corridor) {
+//func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomRoom: inout Room, _ corridor: inout Corridor) {
+//
+//
+//    print("SECTOR TOP ", topRoom.sector, "END \n" )
+//    print("doors TOP ", topRoom.doors, "END \n")
+//    print("connections TOP ", topRoom.connections, "END \n")
+//    
+//    
+//    print("SECTOR BOTTOM ", bottomRoom.sector, "END \n" )
+//    print("doors BOTTOM ", bottomRoom.doors, "END \n")
+//    print("connections BOTTOM ", bottomRoom.connections, "END \n")
+//////    
+//    
+//    corridor.type = TOP_TO_BOTTOM_CORRIDOR
+//    corridor.pointsCount = 4
+//    corridor.points[0] = topRoom.doors[BOTTOM]
+//    
+//    var yMin = topRoom.doors[BOTTOM].y
+//    var yMax = bottomRoom.doors[TOP].y
+//    
+//    for j in 1..<ROOMS_PER_SIDE + 1 {
+//        if (dungeon.rooms[topRoom.grid_i][j].sector != UNINITIALIZED) {
+//            yMin = max(dungeon.rooms[topRoom.grid_i][j].botRight.y, yMin)
+//        }
+//    }
+//    for j in 1..<ROOMS_PER_SIDE + 1 {
+//        if (dungeon.rooms[bottomRoom.grid_i][j].sector != UNINITIALIZED) {
+//            yMax = min(dungeon.rooms[bottomRoom.grid_i][j].topLeft.y, yMax)
+//        }
+//    }
+//    
+//    guard yMax - yMin - 1 > 0 else {
+//        print("Невозможно создать коридор: недостаточно места между комнатами.")
+//        
+//        return
+//    }
+//    
+//    let randomCenterY = Int.random(in: 1..<(yMax - yMin)) + 1 + yMin
+//
+//    let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, randomCenterY)
+//    let thirdPoint: (x: Int, y: Int) = (bottomRoom.doors[TOP].x, randomCenterY)
+//    
+//    corridor.points[1] = secondPoint
+//    corridor.points[2] = thirdPoint
+//    corridor.points[3] = bottomRoom.doors[TOP]
+//}
+//
+
+
+
+func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomRoom: inout Room, _ corridor: inout Corridor) {
+
+
+//    print("SECTOR TOP ", topRoom.sector, "END \n" )
+//    print("doors TOP ", topRoom.doors, "END \n")
+//    print("connections TOP ", topRoom.connections, "END \n")
+//    
+//    
+//    print("SECTOR BOTTOM ", bottomRoom.sector, "END \n" )
+//    print("doors BOTTOM ", bottomRoom.doors, "END \n")
+//    print("connections BOTTOM ", bottomRoom.connections, "END \n")
+////
+    
     corridor.type = TOP_TO_BOTTOM_CORRIDOR
     corridor.pointsCount = 4
     corridor.points[0] = topRoom.doors[BOTTOM]
     
     var yMin = topRoom.doors[BOTTOM].y
-    var yMax = bottomRoom.doors[TOP].y
+    var yMax = topRoom.connections[BOTTOM]?.doors[TOP].y
+    
+    
+//    var yMax = bottomRoom.doors[TOP].y
     
     for j in 1..<ROOMS_PER_SIDE + 1 {
         if (dungeon.rooms[topRoom.grid_i][j].sector != UNINITIALIZED) {
@@ -365,17 +438,21 @@ func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room
     }
     for j in 1..<ROOMS_PER_SIDE + 1 {
         if (dungeon.rooms[bottomRoom.grid_i][j].sector != UNINITIALIZED) {
-            yMax = min(dungeon.rooms[bottomRoom.grid_i][j].topLeft.y, yMax)
+            yMax = min(dungeon.rooms[bottomRoom.grid_i][j].topLeft.y, yMax!)
+     
         }
     }
     
-    guard yMax - yMin - 1 > 0 else {
+
+
+    
+    guard yMax! - yMin - 1 > 0 else {
         print("Невозможно создать коридор: недостаточно места между комнатами.")
         
         return
     }
     
-    let randomCenterY = Int.random(in: 1..<(yMax - yMin)) + 1 + yMin
+    let randomCenterY = Int.random(in: 1..<(yMax! - yMin)) + 1 + yMin
 
     let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, randomCenterY)
     let thirdPoint: (x: Int, y: Int) = (bottomRoom.doors[TOP].x, randomCenterY)
@@ -384,6 +461,9 @@ func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room
     corridor.points[2] = thirdPoint
     corridor.points[3] = bottomRoom.doors[TOP]
 }
+
+
+
 
 
 
