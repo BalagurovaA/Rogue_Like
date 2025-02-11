@@ -24,7 +24,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D5428C84-2CE3-49C9-94DD-915171937EC5"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RogueLike/DungeonGeneration.swift"
@@ -32,8 +32,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "392"
             endingLineNumber = "392"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -48,8 +48,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "387"
             endingLineNumber = "387"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -64,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "386"
             endingLineNumber = "386"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "598DE74F-87C7-40C6-BB80-3803DFB1E31F - c2faf8d5a5cf4d8"
@@ -127,8 +127,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "381"
             endingLineNumber = "381"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "B7D469AA-6022-49D3-8D20-8A3EF473D19C - c2faf8d5a5cf5bd"
@@ -416,7 +416,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A13E8E7E-AB01-4A75-BE07-517CA76B90ED"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RogueLike/DungeonGeneration.swift"
@@ -424,8 +424,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "393"
             endingLineNumber = "393"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -440,8 +440,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "388"
             endingLineNumber = "388"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            landmarkType = "9">
             <Locations>
                <Location
                   uuid = "7D58EAE9-6B22-4DFB-8AA6-A31F088A6D21 - c2faf8d5a5cf49a"
@@ -510,32 +510,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B81A8BF5-3C5B-4419-A9F8-E935609D165A"
-            shouldBeEnabled = "Yes"
+            uuid = "FDFC0CB7-F78E-46EF-BEFB-A243AC5FDD11"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RogueLike/DungeonGeneration.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "449"
-            endingLineNumber = "449"
-            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            startingLineNumber = "355"
+            endingLineNumber = "355"
+            landmarkName = "generateRightTurnCorridor(_:_:_:_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C813A9A0-F0DE-48CF-A134-BAC632272017"
+            uuid = "4FB63C82-CC97-4351-9EF3-8CFA3A32D704"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RogueLike/DungeonGeneration.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "429"
-            endingLineNumber = "429"
-            landmarkName = "generateTopToBottomCorridor(_:_:_:_:)"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "generateCorridorsGeometry(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D62F53AC-795E-4594-9061-3F6743E66394"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "generateCorridorsGeometry(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD6B7F55-22B3-44DA-A26E-7096987DD24B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
+            landmarkName = "generateCorridorsGeometry(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "881228A7-5809-4DEA-AF46-882386C6459D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "276"
+            endingLineNumber = "276"
+            landmarkName = "generateCorridorsGeometry(_:)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BA9F8C5-14CE-4132-9138-65F9F6A2B350"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RogueLike/DungeonGeneration.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "generateCorridorsGeometry(_:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
