@@ -70,8 +70,8 @@
 		FD2089BB2D5A663900EE7989 /* rogueTestFix */ = {
 			isa = PBXGroup;
 			children = (
-				FD2089BC2D5A663900EE7989 /* main.swift */,
 				FD2089C32D5A668800EE7989 /* constants.swift */,
+				FD2089BC2D5A663900EE7989 /* main.swift */,
 				FD2089C52D5A669F00EE7989 /* dungeonGeneration.swift */,
 				FD2089C72D5A66B300EE7989 /* mapstructs.swift */,
 				FDA7C67F2D5CA7810012D60E /* throughClass.swift */,
