@@ -6,9 +6,9 @@ func generateDungeon(_ dungeon: Dungeon) {
     dungeon.printSectors()
     dungeon.generateConnections()
     dungeon.generateRoomsGeometry()
-
+    
     dungeon.printRoom()
-
+    
     dungeon.generateCorridorsGeometry()
 }
 
@@ -49,65 +49,65 @@ class Dungeon {
     }
     
     /// ---------------------------------------- ROOMS ----------------------------------------
-    func generateSectors() {
-        rooms[1][1].sector = 0
-        rooms[1][1].grid_i = 1
-        rooms[1][1].grid_j = 1
-        sequence[0] = rooms[1][1]
-        
-        rooms[1][2].sector = 1
-        rooms[1][2].grid_i = 1
-        rooms[1][2].grid_j = 2
-        sequence[1] = rooms[1][2]
-        
-        rooms[2][1].sector = 2
-        rooms[2][1].grid_i = 2
-        rooms[2][1].grid_j = 1
-        sequence[2] = rooms[2][1]
-        
-        
-        rooms[2][3].sector = 3
-        rooms[2][3].grid_i = 2
-        rooms[2][3].grid_j = 3
-        sequence[3] = rooms[2][3]
-        
-        
-        rooms[3][2].sector = 4
-        rooms[3][2].grid_i = 3
-        rooms[3][2].grid_j = 2
-        sequence[4] = rooms[3][2]
-        
-        roomCount = 5
-        
-        sequence.sort { room1, room2 in
-            guard let leftRoom = room1, let rightRoom = room2 else { return false }
-            return leftRoom.sector < rightRoom.sector
-        }
-    }
-    
     //    func generateSectors() {
-    //        var sectorr = 0
-    //        while roomCount < 3 {
-    //            for i in 1..<ROOMS_PER_SIDE + 1 {
-    //                for j in 1..<ROOMS_PER_SIDE + 1 {
-    //                    let randomRooms = Double.random(in: 0.0..<1.0)
-    //                    if (rooms[i][j].sector == UNINITIALIZED) && (randomRooms < 0.7) {
-    //                        rooms[i][j].sector = sectorr
-    //                        rooms[i][j].grid_i = i
-    //                        rooms[i][j].grid_j = j
-    //                        sequence[roomCount] = rooms[i][j]
-    //                        roomCount += 1
-    //                        sectorr += 1
-    //                    }
-    //                }
-    //            }
+    //        rooms[1][1].sector = 0
+    //        rooms[1][1].grid_i = 1
+    //        rooms[1][1].grid_j = 1
+    //        sequence[0] = rooms[1][1]
     //
-    //            sequence.sort { room1, room2 in
-    //                guard let leftRoom = room1, let rightRoom = room2 else { return false }
-    //                return leftRoom.sector < rightRoom.sector
-    //            }
+    //        rooms[1][2].sector = 1
+    //        rooms[1][2].grid_i = 1
+    //        rooms[1][2].grid_j = 2
+    //        sequence[1] = rooms[1][2]
+    //
+    //        rooms[2][1].sector = 2
+    //        rooms[2][1].grid_i = 2
+    //        rooms[2][1].grid_j = 1
+    //        sequence[2] = rooms[2][1]
+    //
+    //
+    //        rooms[2][3].sector = 3
+    //        rooms[2][3].grid_i = 2
+    //        rooms[2][3].grid_j = 3
+    //        sequence[3] = rooms[2][3]
+    //
+    //
+    //        rooms[3][2].sector = 4
+    //        rooms[3][2].grid_i = 3
+    //        rooms[3][2].grid_j = 2
+    //        sequence[4] = rooms[3][2]
+    //
+    //        roomCount = 5
+    //
+    //        sequence.sort { room1, room2 in
+    //            guard let leftRoom = room1, let rightRoom = room2 else { return false }
+    //            return leftRoom.sector < rightRoom.sector
     //        }
     //    }
+    
+    func generateSectors() {
+        var sectorr = 0
+        while roomCount < 3 {
+            for i in 1..<ROOMS_PER_SIDE + 1 {
+                for j in 1..<ROOMS_PER_SIDE + 1 {
+                    let randomRooms = Double.random(in: 0.0..<1.0)
+                    if (rooms[i][j].sector == UNINITIALIZED) && (randomRooms < 0.7) {
+                        rooms[i][j].sector = sectorr
+                        rooms[i][j].grid_i = i
+                        rooms[i][j].grid_j = j
+                        sequence[roomCount] = rooms[i][j]
+                        roomCount += 1
+                        sectorr += 1
+                    }
+                }
+            }
+            
+            sequence.sort { room1, room2 in
+                guard let leftRoom = room1, let rightRoom = room2 else { return false }
+                return leftRoom.sector < rightRoom.sector
+            }
+        }
+    }
     
     func printSectors() {
         for i in 0..<rooms.count {
@@ -281,97 +281,102 @@ class Dungeon {
         for i in 1..<ROOMS_PER_SIDE + 1 {
             for j in 1..<ROOMS_PER_SIDE + 1 {
                 
-                var currentRoom = rooms[i][j]
+                let currentRoom = rooms[i][j]
                 
-                if currentRoom.connections[RIGHT] != nil && currentRoom.connections[RIGHT]?.connections[LEFT] == currentRoom {
-                    
-                    var rightRoom = currentRoom.connections[RIGHT]!
+                if currentRoom.connections[RIGHT] != nil && currentRoom.connections[RIGHT]?.connections[LEFT] == currentRoom
+                {
+                    let rightRoom = currentRoom.connections[RIGHT]!
                     var corridor = corridors[corridorsCount]
                     
                     generateLeftToRightCorridor(currentRoom, rightRoom, corridor)
+                    //                    generateLeftToRightCorridor(currentRoom, rightRoom, &corridor) ?inout
+                    
                     corridors[corridorsCount] = corridor
                     corridorsCount += 1
                 }
                 
-//                if currentRoom.connections[BOTTOM] != nil {
-//                    var bottomRoom = currentRoom.connections[BOTTOM]!
-//                    var corridor = dungeon.corridors[dungeon.corridorsCount]
-//
-//                    let gridIDiff = currentRoom.grid_i - bottomRoom.grid_i
-//                    let gridJDiff = currentRoom.grid_j - bottomRoom.grid_j
-//                    
-//                    if gridIDiff == -1 && gridJDiff > 0 {
-//                        generateLeftTurnCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
-//                    } else if gridIDiff == -1 && gridJDiff < 0 {
-//                        generateRightTurnCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
-//                    } else {
-//                        generateTopToBottomCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
-//                    }
-//                    dungeon.corridors[dungeon.corridorsCount] = corridor
-//                    dungeon.corridorsCount += 1
-//                }
+                if currentRoom.connections[BOTTOM] != nil {
+                    var bottomRoom = currentRoom.connections[BOTTOM]!
+                    var corridor = corridors[corridorsCount]
+                    
+                    let gridIDiff = currentRoom.grid_i - bottomRoom.grid_i
+                    let gridJDiff = currentRoom.grid_j - bottomRoom.grid_j
+                    
+                    if gridIDiff == -1 && gridJDiff > 0 {
+                        generateLeftTurnCorridor(currentRoom, bottomRoom, corridor)
+                    }
+                    else if gridIDiff == -1 && gridJDiff < 0 {
+                        generateRightTurnCorridor(currentRoom, bottomRoom, corridor)
+                    } else {
+                    //                        generateTopToBottomCorridor(&dungeon, &currentRoom, &bottomRoom, &corridor)
+                    //                    }
+                    //                    dungeon.corridors[dungeon.corridorsCount] = corridor
+                    //                    dungeon.corridorsCount += 1
+                }
             }
         }
     }
-
     
-    func generateLeftToRightCorridor(_ leftRoom:  Room, _ rightRoom: Room, _ corridor: Corridor) {
+    
+    func generateLeftToRightCorridor(_ leftRoom: Room, _ rightRoom: Room, _ corridor: Corridor) {
+        // Инициализация коридора
         corridor.type = LEFT_TO_RIGHT_CORRIDOR
         corridor.pointsCount = 4
         corridor.points[0] = leftRoom.doors[RIGHT]
         
+        
         var xMin = leftRoom.doors[RIGHT].x
         var xMax = rightRoom.doors[LEFT].x
         
-        for i in 1..<ROOMS_PER_SIDE + 1  {
+        for i in 1..<ROOMS_PER_SIDE + 1 {
             if rooms[i][leftRoom.grid_j].sector != UNINITIALIZED && i != leftRoom.grid_i {
                 xMin = max(rooms[i][leftRoom.grid_j].botRight.x, xMin)
             }
         }
         for i in 1..<ROOMS_PER_SIDE + 1 {
             if rooms[i][rightRoom.grid_j].sector != UNINITIALIZED && i != rightRoom.grid_i {
-                xMax = min(rooms[i][rightRoom.grid_j].topLeft.x, xMin)
+                xMax = min(rooms[i][rightRoom.grid_j].topLeft.x, xMax)
             }
         }
         
-        let range = xMax - xMin - 1
-        let randomValue = Int(arc4random_uniform(UInt32(range))) + 1
-        let randomCenterX = randomValue + xMin
+        guard xMax > xMin else {
+            print("Error: Invalid range for corridor generation (xMax: \(xMax), xMin: \(xMin)).")
+            return
+        }
         
-        let secondPoint: (x: Int, y: Int) = (randomCenterX, leftRoom.doors[RIGHT].y)
-        let thirdPoint: (x: Int, y: Int) = (randomCenterX, rightRoom.doors[LEFT].y)
+        let range = xMax - xMin - 1
+        let randomCenterX = Int.random(in: 1..<range) + xMin
+        
+        let secondPoint = (x: randomCenterX, y: leftRoom.doors[RIGHT].y)
+        let thirdPoint = (x: randomCenterX, y: rightRoom.doors[LEFT].y)
         
         corridor.points[1] = secondPoint
         corridor.points[2] = thirdPoint
-        corridor.points[3] = rightRoom.doors[3]
+        corridor.points[3] = rightRoom.doors[LEFT]
+    }
+    
+    func generateLeftTurnCorridor(_ topRoom: Room, _ bottomLeftRoom: Room, _ corridor: Corridor) {
+        
+        corridor.type = LEFT_TURN_CORRIDOR
+        corridor.pointsCount = 3
+        corridor.points[0] = topRoom.doors[BOTTOM]
+        
+        let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, bottomLeftRoom.doors[RIGHT].y)
+        corridor.points[1] = secondPoint
+        corridor.points[2] = bottomLeftRoom.doors[RIGHT]
+    }
+    
+    func generateRightTurnCorridor(_ topRoom: Room, _ bottomRightRoom: Room, _ corridor: Corridor) {
+
+        corridor.type = RIGHT_TURN_CORRIDOR
+        corridor.pointsCount = 3
+        corridor.points[0] = topRoom.doors[BOTTOM]
+        
+        let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, bottomRightRoom.doors[LEFT].y)
+        corridor.points[1] = secondPoint
+        corridor.points[2] = bottomRightRoom.doors[LEFT]
     }
 }
-
-//func generateLeftTurnCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomLeftRoom: inout Room, _ corridor: inout Corridor) {
-////         |
-////       --
-//    corridor.type = LEFT_TURN_CORRIDOR
-//    corridor.pointsCount = 3
-//    corridor.points[0] = topRoom.doors[BOTTOM]
-//    
-//    let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, bottomLeftRoom.doors[RIGHT].y)
-//    corridor.points[1] = secondPoint
-//    corridor.points[2] = bottomLeftRoom.doors[RIGHT]
-//}
-//
-//
-//func generateRightTurnCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomRightRoom: inout Room, _ corridor: inout Corridor) {
-//    //         |
-//    //          --
-//    corridor.type = RIGHT_TURN_CORRIDOR
-//    corridor.pointsCount = 3
-//    corridor.points[0] = topRoom.doors[BOTTOM]
-//    
-//    let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, bottomRightRoom.doors[LEFT].y)
-//    corridor.points[1] = secondPoint
-//    corridor.points[2] = bottomRightRoom.doors[LEFT]
-//    
-//}
 //
 //func generateTopToBottomCorridor(_ dungeon: inout Dungeon, _ topRoom: inout Room, _ bottomRoom: inout Room, _ corridor: inout Corridor) {
 //
@@ -379,20 +384,20 @@ class Dungeon {
 //    print("SECTOR TOP ", topRoom.sector, "END \n" )
 //    print("doors TOP ", topRoom.doors, "END \n")
 //    print("connections TOP ", topRoom.connections, "END \n")
-//    
-//    
+//
+//
 //    print("SECTOR BOTTOM ", bottomRoom.sector, "END \n" )
 //    print("doors BOTTOM ", bottomRoom.doors, "END \n")
 //    print("connections BOTTOM ", bottomRoom.connections, "END \n")
 //////
-//    
+//
 //    corridor.type = TOP_TO_BOTTOM_CORRIDOR
 //    corridor.pointsCount = 4
 //    corridor.points[0] = topRoom.doors[BOTTOM]
-//    
+//
 //    var yMin = topRoom.doors[BOTTOM].y
 //    var yMax = bottomRoom.doors[TOP].y
-//    
+//
 //    for j in 1..<ROOMS_PER_SIDE + 1 {
 //        if (dungeon.rooms[topRoom.grid_i][j].sector != UNINITIALIZED) {
 //            yMin = max(dungeon.rooms[topRoom.grid_i][j].botRight.y, yMin)
@@ -403,18 +408,18 @@ class Dungeon {
 //            yMax = min(dungeon.rooms[bottomRoom.grid_i][j].topLeft.y, yMax)
 //        }
 //    }
-//    
+//
 //    guard yMax - yMin - 1 > 0 else {
 //        print("Невозможно создать коридор: недостаточно места между комнатами.")
-//        
+//
 //        return
 //    }
-//    
+//
 //    let randomCenterY = Int.random(in: 1..<(yMax - yMin)) + 1 + yMin
 //
 //    let secondPoint: (x: Int, y: Int) = (topRoom.doors[BOTTOM].x, randomCenterY)
 //    let thirdPoint: (x: Int, y: Int) = (bottomRoom.doors[TOP].x, randomCenterY)
-//    
+//
 //    corridor.points[1] = secondPoint
 //    corridor.points[2] = thirdPoint
 //    corridor.points[3] = bottomRoom.doors[TOP]

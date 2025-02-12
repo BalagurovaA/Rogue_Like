@@ -50,7 +50,7 @@ class Corridor {
     
     init() {
         self.type = UNINITIALIZED
-        self.points = [(x: 0, y: 0)]
+        self.points = [(x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0)]
         self.pointsCount = UNINITIALIZED
     }
     
