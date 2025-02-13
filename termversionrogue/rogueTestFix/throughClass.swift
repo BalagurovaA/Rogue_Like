@@ -47,67 +47,70 @@ class Dungeon {
                 rooms[i][j].enitiesCount = 0
             }
         }
+        for i in 0..<MAX_CORRIDORS_NUMBER {
+            corridors[i] = Corridor()
+        }
     }
     
     /// ---------------------------------------- ROOMS ----------------------------------------
-//    func generateSectors() {
-//        rooms[1][1].sector = 0
-//        rooms[1][1].grid_i = 1
-//        rooms[1][1].grid_j = 1
-//        sequence[0] = rooms[1][1]
-//        
-//        rooms[1][2].sector = 1
-//        rooms[1][2].grid_i = 1
-//        rooms[1][2].grid_j = 2
-//        sequence[1] = rooms[1][2]
-//        
-//        rooms[2][1].sector = 2
-//        rooms[2][1].grid_i = 2
-//        rooms[2][1].grid_j = 1
-//        sequence[2] = rooms[2][1]
-//        
-//        
-//        rooms[2][3].sector = 3
-//        rooms[2][3].grid_i = 2
-//        rooms[2][3].grid_j = 3
-//        sequence[3] = rooms[2][3]
-//        
-//        
-//        rooms[3][2].sector = 4
-//        rooms[3][2].grid_i = 3
-//        rooms[3][2].grid_j = 2
-//        sequence[4] = rooms[3][2]
-//        
-//        roomCount = 5
-//        
-//        sequence.sort { room1, room2 in
-//            guard let leftRoom = room1, let rightRoom = room2 else { return false }
-//            return leftRoom.sector < rightRoom.sector
-//        }
-//    }
+    //    func generateSectors() {
+    //        rooms[1][1].sector = 0
+    //        rooms[1][1].grid_i = 1
+    //        rooms[1][1].grid_j = 1
+    //        sequence[0] = rooms[1][1]
+    //
+    //        rooms[1][2].sector = 1
+    //        rooms[1][2].grid_i = 1
+    //        rooms[1][2].grid_j = 2
+    //        sequence[1] = rooms[1][2]
+    //
+    //        rooms[2][1].sector = 2
+    //        rooms[2][1].grid_i = 2
+    //        rooms[2][1].grid_j = 1
+    //        sequence[2] = rooms[2][1]
+    //
+    //
+    //        rooms[2][3].sector = 3
+    //        rooms[2][3].grid_i = 2
+    //        rooms[2][3].grid_j = 3
+    //        sequence[3] = rooms[2][3]
+    //
+    //
+    //        rooms[3][2].sector = 4
+    //        rooms[3][2].grid_i = 3
+    //        rooms[3][2].grid_j = 2
+    //        sequence[4] = rooms[3][2]
+    //
+    //        roomCount = 5
+    //
+    //        sequence.sort { room1, room2 in
+    //            guard let leftRoom = room1, let rightRoom = room2 else { return false }
+    //            return leftRoom.sector < rightRoom.sector
+    //        }
+    //    }
     
-        func generateSectors() {
-            var sectorr = 0
-            while roomCount < 3 {
-                for i in 1..<ROOMS_PER_SIDE + 1 {
-                    for j in 1..<ROOMS_PER_SIDE + 1 {
-                        let randomRooms = Double.random(in: 0.0..<1.0)
-                        if (rooms[i][j].sector == UNINITIALIZED) && (randomRooms < 0.7) {
-                            rooms[i][j].sector = sectorr
-                            rooms[i][j].grid_i = i
-                            rooms[i][j].grid_j = j
-                            sequence[roomCount] = rooms[i][j]
-                            roomCount += 1
-                            sectorr += 1
-                        }
+    func generateSectors() {
+        var sectorr = 0
+        while roomCount < 3 {
+            for i in 1..<ROOMS_PER_SIDE + 1 {
+                for j in 1..<ROOMS_PER_SIDE + 1 {
+                    let randomRooms = Double.random(in: 0.0..<1.0)
+                    if (rooms[i][j].sector == UNINITIALIZED) && (randomRooms < 0.7) {
+                        rooms[i][j].sector = sectorr
+                        rooms[i][j].grid_i = i
+                        rooms[i][j].grid_j = j
+                        sequence[roomCount] = rooms[i][j]
+                        roomCount += 1
+                        sectorr += 1
                     }
                 }
-                sequence.sort { room1, room2 in
-                    guard let leftRoom = room1, let rightRoom = room2 else { return false }
-                    return leftRoom.sector < rightRoom.sector
-                }
+            }
+            sequence.sort { room1, room2 in
+                guard let leftRoom = room1, let rightRoom = room2 else { return false }
+                return leftRoom.sector < rightRoom.sector
             }
         }
+    }
     
     func printSectors() {
         for i in 0..<rooms.count {
@@ -272,7 +275,7 @@ class Dungeon {
             print()
         }
     }
-
+    
     /// ----------------------------------------  CORRIDORS  ----------------------------------------
     func generateCorridorsGeometry() {
         for i in 1..<ROOMS_PER_SIDE + 1 {
@@ -280,15 +283,17 @@ class Dungeon {
                 
                 let currentRoom = rooms[i][j]
                 
-                if currentRoom.connections[RIGHT] != nil && currentRoom.connections[RIGHT]?.connections[LEFT] == currentRoom
-                {
-                    let rightRoom = currentRoom.connections[RIGHT]!
-                    let corridor = corridors[corridorsCount]
-                    
-                    generateLeftToRightCorridor(currentRoom, rightRoom, corridor)
-                    
-                    corridors[corridorsCount] = corridor
-                    corridorsCount += 1
+                if currentRoom.connections[RIGHT] != nil {
+                    if currentRoom.connections[RIGHT]?.connections[LEFT] == currentRoom
+                    {
+                        let rightRoom = currentRoom.connections[RIGHT]!
+                        let corridor = corridors[corridorsCount]
+                        
+                        generateLeftToRightCorridor(currentRoom, rightRoom, corridor)
+                        
+                        corridors[corridorsCount] = corridor
+                        corridorsCount += 1
+                    }
                 }
                 
                 if currentRoom.connections[BOTTOM] != nil {
@@ -312,11 +317,49 @@ class Dungeon {
             }
         }
     }
+//    func generateCorridorsGeometry() {
+//        for i in 1..<ROOMS_PER_SIDE + 1 {
+//            for j in 1..<ROOMS_PER_SIDE + 1 {
+//                
+//                let currentRoom = rooms[i][j]
+//                
+//                if currentRoom.connections[RIGHT] != nil && currentRoom.connections[RIGHT]?.connections[LEFT] == currentRoom
+//                {
+//                    let rightRoom = currentRoom.connections[RIGHT]!
+//                    let corridor = corridors[corridorsCount]
+//                    
+//                    generateLeftToRightCorridor(currentRoom, rightRoom, corridor)
+//                    
+//                    corridors[corridorsCount] = corridor
+//                    corridorsCount += 1
+//                }
+//                
+//                if currentRoom.connections[BOTTOM] != nil {
+//                    let bottomRoom = currentRoom.connections[BOTTOM]!
+//                    let corridor = corridors[corridorsCount]
+//                    
+//                    let gridIDiff = currentRoom.grid_i - bottomRoom.grid_i
+//                    let gridJDiff = currentRoom.grid_j - bottomRoom.grid_j
+//                    
+//                    if gridIDiff == -1 && gridJDiff > 0 {
+//                        generateLeftTurnCorridor(currentRoom, bottomRoom, corridor)
+//                    }
+//                    else if gridIDiff == -1 && gridJDiff < 0 {
+//                        generateRightTurnCorridor(currentRoom, bottomRoom, corridor)
+//                    } else {
+//                        generateTopToBottomCorridor(currentRoom, bottomRoom, corridor)
+//                    }
+//                    corridors[corridorsCount] = corridor
+//                    corridorsCount += 1
+//                }
+//            }
+//        }
+//    }
     
     
     func generateLeftToRightCorridor(_ leftRoom: Room, _ rightRoom: Room, _ corridor: Corridor) {
         // Инициализация коридора
-        corridor.type = LEFT_TO_RIGHT_CORRIDOR
+//        corridor.type = LEFT_TO_RIGHT_CORRIDOR
         corridor.pointsCount = 4
         corridor.points[0] = leftRoom.doors[RIGHT]
         
@@ -416,7 +459,29 @@ class Dungeon {
         
         // Создаем матрицу для отображения подземелья
         var dungeonGrid = [[Character]](repeating: [Character](repeating: "-", count: dungeonWidth), count: dungeonHeight)
+        
+//        for corridor in corridors.prefix(corridorsCount) {
+//            for pointIndex in 0..<corridor.pointsCount {
+//                let point = corridor.points[pointIndex]
+//                // Проверяем, что точка находится в пределах подземелья
+//                if point.y >= 0 && point.y < dungeonHeight && point.x >= 0 && point.x < dungeonWidth {
+//                    dungeonGrid[point.y][point.x] = Character(String(corridor)) // Коридор
+//                }
+//            }
+//        }
+        for (index, corridor) in corridors.prefix(corridorsCount).enumerated() {
+               for pointIndex in 0..<corridor.pointsCount {
+                   let point = corridor.points[pointIndex]
+                   // Проверяем, что точка находится в пределах подземелья
+                   if point.y >= 0 && point.y < dungeonHeight && point.x >= 0 && point.x < dungeonWidth {
+                       // Преобразуем индекс коридора в символ (например, "0", "1", "2", и т.д.)
+                       dungeonGrid[point.y][point.x] = Character(String(index)) // Коридор
+                   }
+               }
+           }
+        
 
+        
         // Отображаем комнаты
         for i in 1..<ROOMS_PER_SIDE + 1 {
             for j in 1..<ROOMS_PER_SIDE + 1 {
@@ -441,18 +506,11 @@ class Dungeon {
                 }
             }
         }
+        // Отображаем коридоры
+
         
-        // Отображение коридоров
-        for corridor in corridors.prefix(corridorsCount) {
-            for pointIndex in 0..<corridor.pointsCount {
-                let point = corridor.points[pointIndex]
-                if point.x >= 0 && point.x < dungeonWidth && point.y >= 0 && point.y < dungeonHeight {
-                    dungeonGrid[point.y][point.x] = "C" // Коридор
-                }
-            }
-        }
         
-        // Вывод мatrix подземелья
+        // Вывод матрицы подземелья
         for y in 0..<dungeonHeight {
             for x in 0..<dungeonWidth {
                 print(dungeonGrid[y][x], terminator: "")
@@ -460,6 +518,4 @@ class Dungeon {
             print()
         }
     }
-
 }
-
