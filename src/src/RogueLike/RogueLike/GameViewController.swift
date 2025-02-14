@@ -9,6 +9,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+
 extension SKNode {
     class func unarchiveFromFile(_ file: NSString) -> SKNode? {
 
@@ -42,7 +43,6 @@ extension SKNode {
     }
 }
 
-
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -62,9 +62,7 @@ class GameViewController: UIViewController {
         print("НЕ ПОЛУЧИЛОСЬ СОЗДАТЬ СЦЕНУ")
         }
         
-        
-        var newDungeon = Dungeon()
-        generateDungeon(&newDungeon)
+
         
     }
     

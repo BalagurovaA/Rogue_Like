@@ -1,13 +1,6 @@
-//
-//  MapStructs.swift
-//  RogueLike
-//
-//  Created by Kristofer Sartorial on 1/23/25.
-//
-
 import Foundation
 
-struct Room: Equatable {
+class Room: Equatable {
     
     static func == (lhs: Room, rhs: Room) -> Bool {
         
@@ -18,7 +11,7 @@ struct Room: Equatable {
         lhs.grid_i == rhs.grid_j &&
         lhs.botRight == rhs.botRight &&
         lhs.enitiesCount == rhs.enitiesCount
-//         && lhs.doors == rhs.doors
+        //         && lhs.doors == rhs.doors
         
     }
     
@@ -48,27 +41,7 @@ struct Room: Equatable {
     }
 }
 
-struct Dungeon {
-    var rooms: [[Room]]
-    var sequence: [Room?]
-    var corridors: [Corridor]
-    
-    var roomCount: Int
-    var corridorsCount: Int
-    
-    init() {
-        let roomPerSide: Int = 3
-        let totalRooms = roomPerSide + 2
-        rooms = Array(repeating: Array(repeating: Room(), count: totalRooms), count: totalRooms)
-        corridors = Array(repeating: Corridor(), count: MAX_CORRIDORS_NUMBER)
-        sequence = Array(repeating: nil, count: MAX_ROOMS_NUMBER)
-        
-        roomCount = 0
-        corridorsCount = 0
-    }
-}
-
-struct Corridor {
+class Corridor {
     
     var type: Int
     var points: [(x: Int, y: Int)]
@@ -76,10 +49,8 @@ struct Corridor {
     
     init() {
         self.type = UNINITIALIZED
-        self.points = [(x: 0, y: 0)]
+        self.points = [(x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0)]
         self.pointsCount = UNINITIALIZED
     }
     
 }
-
-

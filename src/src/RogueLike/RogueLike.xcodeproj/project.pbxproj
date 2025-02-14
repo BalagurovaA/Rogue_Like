@@ -15,10 +15,9 @@
 		21117CA52D40F059004C64BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21117CA32D40F059004C64BC /* Main.storyboard */; };
 		21117CA72D40F05C004C64BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21117CA62D40F05C004C64BC /* Assets.xcassets */; };
 		21117CAA2D40F05C004C64BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21117CA82D40F05C004C64BC /* LaunchScreen.storyboard */; };
-		FD0A06FC2D4692DB00A42BE9 /* draft.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A06FB2D4692DB00A42BE9 /* draft.swift */; };
 		FD0A06FE2D46955300A42BE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A06FD2D46955300A42BE9 /* Constants.swift */; };
-		FD1727072D5511B900A89204 /* DrawDungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1727062D5511B900A89204 /* DrawDungeon.swift */; };
-		FD2BE7102D427B580011C42B /* MapStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2BE70F2D427B580011C42B /* MapStructs.swift */; };
+		FD2878E02D5FB27500E0FE67 /* PrintDungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */; };
+		FDE4D7822D5D0A9D00EBD537 /* MapClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */; };
 		FDF93DBC2D4FDCA2008D73CF /* DungeonGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +31,9 @@
 		21117CA42D40F059004C64BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21117CA62D40F05C004C64BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21117CA92D40F05C004C64BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FD0A06FB2D4692DB00A42BE9 /* draft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = draft.swift; sourceTree = "<group>"; };
 		FD0A06FD2D46955300A42BE9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		FD1727062D5511B900A89204 /* DrawDungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawDungeon.swift; sourceTree = "<group>"; };
-		FD2BE70F2D427B580011C42B /* MapStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStructs.swift; sourceTree = "<group>"; };
+		FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDungeon.swift; sourceTree = "<group>"; };
+		FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapClasses.swift; sourceTree = "<group>"; };
 		FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonGeneration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,15 +68,14 @@
 			isa = PBXGroup;
 			children = (
 				FD0A06FD2D46955300A42BE9 /* Constants.swift */,
-				FD2BE70F2D427B580011C42B /* MapStructs.swift */,
+				FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */,
 				FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */,
-				FD0A06FB2D4692DB00A42BE9 /* draft.swift */,
+				FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */,
 				21117C992D40F059004C64BC /* AppDelegate.swift */,
 				21117C9B2D40F059004C64BC /* GameScene.sks */,
 				21117C9D2D40F059004C64BC /* Actions.sks */,
 				21117C9F2D40F059004C64BC /* GameScene.swift */,
 				21117CA12D40F059004C64BC /* GameViewController.swift */,
-				FD1727062D5511B900A89204 /* DrawDungeon.swift */,
 				21117CA32D40F059004C64BC /* Main.storyboard */,
 				21117CA62D40F05C004C64BC /* Assets.xcassets */,
 				21117CA82D40F05C004C64BC /* LaunchScreen.storyboard */,
@@ -159,12 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE4D7822D5D0A9D00EBD537 /* MapClasses.swift in Sources */,
 				21117CA02D40F059004C64BC /* GameScene.swift in Sources */,
+				FD2878E02D5FB27500E0FE67 /* PrintDungeon.swift in Sources */,
 				21117CA22D40F059004C64BC /* GameViewController.swift in Sources */,
-				FD1727072D5511B900A89204 /* DrawDungeon.swift in Sources */,
-				FD2BE7102D427B580011C42B /* MapStructs.swift in Sources */,
 				21117C9A2D40F059004C64BC /* AppDelegate.swift in Sources */,
-				FD0A06FC2D4692DB00A42BE9 /* draft.swift in Sources */,
 				FDF93DBC2D4FDCA2008D73CF /* DungeonGeneration.swift in Sources */,
 				FD0A06FE2D46955300A42BE9 /* Constants.swift in Sources */,
 			);
