@@ -12,6 +12,7 @@
 		FD2089C62D5A669F00EE7989 /* dungeonGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2089C52D5A669F00EE7989 /* dungeonGeneration.swift */; };
 		FD2089C82D5A66B300EE7989 /* mapstructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2089C72D5A66B300EE7989 /* mapstructs.swift */; };
 		FD2089CA2D5A67C700EE7989 /* normFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2089C92D5A67C700EE7989 /* normFunc.swift */; };
+		FD28C5EE2D5F5F7700B0508C /* rarelyNeededFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD28C5ED2D5F5F7700B0508C /* rarelyNeededFunc.swift */; };
 		FDA7C6802D5CA7810012D60E /* throughClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7C67F2D5CA7810012D60E /* throughClass.swift */; };
 		FDA7C6822D5CA94E0012D60E /* myClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7C6812D5CA94E0012D60E /* myClasses.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		FD2089C52D5A669F00EE7989 /* dungeonGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dungeonGeneration.swift; sourceTree = "<group>"; };
 		FD2089C72D5A66B300EE7989 /* mapstructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapstructs.swift; sourceTree = "<group>"; };
 		FD2089C92D5A67C700EE7989 /* normFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = normFunc.swift; sourceTree = "<group>"; };
+		FD28C5ED2D5F5F7700B0508C /* rarelyNeededFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rarelyNeededFunc.swift; sourceTree = "<group>"; };
 		FDA7C67F2D5CA7810012D60E /* throughClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = throughClass.swift; sourceTree = "<group>"; };
 		FDA7C6812D5CA94E0012D60E /* myClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myClasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -54,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				FD2089C92D5A67C700EE7989 /* normFunc.swift */,
+				FD2089C72D5A66B300EE7989 /* mapstructs.swift */,
+				FD2089C52D5A669F00EE7989 /* dungeonGeneration.swift */,
 				FD2089BB2D5A663900EE7989 /* rogueTestFix */,
 				FD2089BA2D5A663900EE7989 /* Products */,
 			);
@@ -70,12 +74,11 @@
 		FD2089BB2D5A663900EE7989 /* rogueTestFix */ = {
 			isa = PBXGroup;
 			children = (
-				FD2089C32D5A668800EE7989 /* constants.swift */,
 				FD2089BC2D5A663900EE7989 /* main.swift */,
-				FD2089C52D5A669F00EE7989 /* dungeonGeneration.swift */,
-				FD2089C72D5A66B300EE7989 /* mapstructs.swift */,
+				FD2089C32D5A668800EE7989 /* constants.swift */,
 				FDA7C67F2D5CA7810012D60E /* throughClass.swift */,
 				FDA7C6812D5CA94E0012D60E /* myClasses.swift */,
+				FD28C5ED2D5F5F7700B0508C /* rarelyNeededFunc.swift */,
 			);
 			path = rogueTestFix;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDA7C6802D5CA7810012D60E /* throughClass.swift in Sources */,
+				FD28C5EE2D5F5F7700B0508C /* rarelyNeededFunc.swift in Sources */,
 				FD2089CA2D5A67C700EE7989 /* normFunc.swift in Sources */,
 				FD2089BD2D5A663900EE7989 /* main.swift in Sources */,
 				FD2089C82D5A66B300EE7989 /* mapstructs.swift in Sources */,
