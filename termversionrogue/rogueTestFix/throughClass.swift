@@ -381,6 +381,56 @@ class Dungeon {
     }
     
     
+//    func printCorridors() {
+//        let dungeonHeight = (ROOMS_PER_SIDE + 2) * SECTOR_HEIGHT
+//        let dungeonWidth = (ROOMS_PER_SIDE + 2) * SECTOR_WIDTH
+//        
+//        // Создаем матрицу для отображения подземелья
+//        var dungeonGrid = [[Character]](repeating: [Character](repeating: "-", count: dungeonWidth), count: dungeonHeight)
+//        
+//        for (index, corridor) in corridors.prefix(corridorsCount).enumerated() {
+//            for pointIndex in 0..<corridor.pointsCount {
+//                let point = corridor.points[pointIndex]
+//                // Проверяем, что точка находится в пределах подземелья
+//                if point.y >= 0 && point.y < dungeonHeight && point.x >= 0 && point.x < dungeonWidth {
+//                    dungeonGrid[point.y][point.x] = Character(String(index))
+//                }
+//            }
+//        }
+//        
+//        
+//        for i in 1..<ROOMS_PER_SIDE + 1 {
+//            for j in 1..<ROOMS_PER_SIDE + 1 {
+//                let room = rooms[i][j]
+//                if room.sector != UNINITIALIZED {
+//                    // Заполнение области комнаты
+//                    for y in room.topLeft.y...room.botRight.y {
+//                        for x in room.topLeft.x...room.botRight.x {
+//                            if y == room.topLeft.y || y == room.botRight.y || x == room.topLeft.x || x == room.botRight.x {
+//                                dungeonGrid[y][x] = "1"
+//                            } else {
+//                                dungeonGrid[y][x] = "0"
+//                            }
+//                        }
+//                    }
+//                    // Отображение дверей
+//                    for d in 0..<4 {
+//                        if room.doors[d].x != UNINITIALIZED && room.doors[d].y != UNINITIALIZED {
+//                            dungeonGrid[room.doors[d].y][room.doors[d].x] = "D"
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//   
+//        // Вывод матрицы подземелья
+//        for y in 0..<dungeonHeight {
+//            for x in 0..<dungeonWidth {
+//                print(dungeonGrid[y][x], terminator: "")
+//            }
+//            print()
+//        }
+//    }
     func printCorridors() {
         let dungeonHeight = (ROOMS_PER_SIDE + 2) * SECTOR_HEIGHT
         let dungeonWidth = (ROOMS_PER_SIDE + 2) * SECTOR_WIDTH
@@ -388,17 +438,7 @@ class Dungeon {
         // Создаем матрицу для отображения подземелья
         var dungeonGrid = [[Character]](repeating: [Character](repeating: "-", count: dungeonWidth), count: dungeonHeight)
         
-        for (index, corridor) in corridors.prefix(corridorsCount).enumerated() {
-            for pointIndex in 0..<corridor.pointsCount {
-                let point = corridor.points[pointIndex]
-                // Проверяем, что точка находится в пределах подземелья
-                if point.y >= 0 && point.y < dungeonHeight && point.x >= 0 && point.x < dungeonWidth {
-                    dungeonGrid[point.y][point.x] = Character(String(index))
-                }
-            }
-        }
-        
-        
+        // Сначала рисуем комнаты
         for i in 1..<ROOMS_PER_SIDE + 1 {
             for j in 1..<ROOMS_PER_SIDE + 1 {
                 let room = rooms[i][j]
@@ -407,22 +447,33 @@ class Dungeon {
                     for y in room.topLeft.y...room.botRight.y {
                         for x in room.topLeft.x...room.botRight.x {
                             if y == room.topLeft.y || y == room.botRight.y || x == room.topLeft.x || x == room.botRight.x {
-                                dungeonGrid[y][x] = "1"
+                                dungeonGrid[y][x] = "1" // Стены комнаты
                             } else {
-                                dungeonGrid[y][x] = "0"
+                                dungeonGrid[y][x] = "0" // Внутренняя часть комнаты
                             }
                         }
                     }
                     // Отображение дверей
                     for d in 0..<4 {
                         if room.doors[d].x != UNINITIALIZED && room.doors[d].y != UNINITIALIZED {
-                            dungeonGrid[room.doors[d].y][room.doors[d].x] = "D"
+                            dungeonGrid[room.doors[d].y][room.doors[d].x] = "D" // Двери
                         }
                     }
                 }
             }
         }
-   
+        
+        // Теперь рисуем коридоры
+        for corridor in corridors.prefix(corridorsCount) {
+            for i in 0..<corridor.pointsCount - 1 {
+                let start = corridor.points[i]
+                let end = corridor.points[i + 1]
+                
+                // Рисуем линию между точками
+                drawLine(from: start, to: end, in: &dungeonGrid)
+            }
+        }
+        
         // Вывод матрицы подземелья
         for y in 0..<dungeonHeight {
             for x in 0..<dungeonWidth {
@@ -431,4 +482,40 @@ class Dungeon {
             print()
         }
     }
+
+    // Функция для рисования линии между двумя точками
+    func drawLine(from start: (x: Int, y: Int), to end: (x: Int, y: Int), in grid: inout [[Character]]) {
+        var x = start.x
+        var y = start.y
+        
+        let dx = abs(end.x - start.x)
+        let dy = abs(end.y - start.y)
+        
+        let sx = start.x < end.x ? 1 : -1
+        let sy = start.y < end.y ? 1 : -1
+        
+        var err = dx - dy
+        
+        while true {
+            // Убедимся, что не перезаписываем стены или двери
+            if grid[y][x] == "-" {
+                grid[y][x] = "#" // Коридор
+            }
+            
+            if x == end.x && y == end.y {
+                break
+            }
+            
+            let e2 = 2 * err
+            if e2 > -dy {
+                err -= dy
+                x += sx
+            }
+            if e2 < dx {
+                err += dx
+                y += sy
+            }
+        }
+    }
+
 }
