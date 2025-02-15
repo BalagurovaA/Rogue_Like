@@ -1,10 +1,3 @@
-//
-//  GameViewController.swift
-//  RogueLike
-//
-//  Created by Starfighter Dollie on 1/22/25.
-//
-
 import UIKit
 import SpriteKit
 import GameplayKit
