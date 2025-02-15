@@ -52,12 +52,16 @@ class PrintDungeon {
             for j in 1..<ROOMS_PER_SIDE + 1 {
                 let room = dungeon.rooms[i][j]
                 if room.sector != UNINITIALIZED {
-                
+                    
                     for y in room.topLeft.y...room.botRight.y {
                         for x in room.topLeft.x...room.botRight.x {
-                            if y == room.topLeft.y || y == room.botRight.y || x == room.topLeft.x || x == room.botRight.x {
+                            
+                            if y == room.topLeft.y ||  y == room.botRight.y  {
                                 dungeonGrid[y][x] = "1"
-                            } else {
+                            } else if x == room.botRight.x || x == room.topLeft.x {
+                                dungeonGrid[y][x] = "2"
+                            }
+                            else {
                                 dungeonGrid[y][x] = "0"
                             }
                         }
@@ -87,38 +91,38 @@ class PrintDungeon {
     }
     
     //    // Функция для рисования линии между двумя точками
-        func drawLine(from start: (x: Int, y: Int), to end: (x: Int, y: Int), in grid: inout [[Character]]) {
-            var x = start.x
-            var y = start.y
-    
-            let dx = abs(end.x - start.x)
-            let dy = abs(end.y - start.y)
-    
-            let sx = start.x < end.x ? 1 : -1
-            let sy = start.y < end.y ? 1 : -1
-    
-            var err = dx - dy
-    
-            while true {
-                if grid[y][x] == "-" {
-                    grid[y][x] = "#"
-                }
-    
-                if x == end.x && y == end.y {
-                    break
-                }
-    
-                let e2 = 2 * err
-                if e2 > -dy {
-                    err -= dy
-                    x += sx
-                }
-                if e2 < dx {
-                    err += dx
-                    y += sy
-                }
+    func drawLine(from start: (x: Int, y: Int), to end: (x: Int, y: Int), in grid: inout [[Character]]) {
+        var x = start.x
+        var y = start.y
+        
+        let dx = abs(end.x - start.x)
+        let dy = abs(end.y - start.y)
+        
+        let sx = start.x < end.x ? 1 : -1
+        let sy = start.y < end.y ? 1 : -1
+        
+        var err = dx - dy
+        
+        while true {
+            if grid[y][x] == "-" {
+                grid[y][x] = "#"
+            }
+            
+            if x == end.x && y == end.y {
+                break
+            }
+            
+            let e2 = 2 * err
+            if e2 > -dy {
+                err -= dy
+                x += sx
+            }
+            if e2 < dx {
+                err += dx
+                y += sy
             }
         }
+    }
     
     
     

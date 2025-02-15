@@ -13,7 +13,7 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
-        
+        self.size = CGSize(width: 3000, height: 3000)
         setSetting()
     
         var newDungeon = Dungeon()
@@ -28,15 +28,15 @@ class GameScene: SKScene {
 
         
     }
-    /////////!!!!!!!!!!!!!!!!!!!!
+
     @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
+//        сбрасывает смещение, чтобы следующее движение начиналось с нуля
         let translation = gesture.translation(in: self.view)
         
         if let dungeonScene = self.children.first as? DungeonScene {
             var newPositionX = dungeonScene.position.x + translation.x
             var newPositionY = dungeonScene.position.y - translation.y
             
-            // Ограничиваем перемещение
             let minX: CGFloat = -dungeonScene.size.width / 2
             let maxX: CGFloat = self.size.width + dungeonScene.size.width / 2
             let minY: CGFloat = -dungeonScene.size.height / 2
@@ -80,20 +80,26 @@ class DungeonScene: SKSpriteNode {
     let dungeonHeight = (ROOMS_PER_SIDE + 2) * SECTOR_HEIGHT
     let dungeonWidth = (ROOMS_PER_SIDE + 2) * SECTOR_WIDTH
     let floorTexture: SKTexture
-    let wallTexture: SKTexture
+    let wallVertTexture: SKTexture
+    let wallHorTexture: SKTexture
     var dungeonScene: [[SKTexture]]
     
     init() {
         floorTexture = SKTexture(imageNamed: "floor")
-        wallTexture = SKTexture(imageNamed: "wall")
+        wallVertTexture = SKTexture(imageNamed: "wallVert")
+        wallHorTexture = SKTexture(imageNamed: "wallHor")
         
         self.dungeonScene = Array(repeating: Array(repeating: floorTexture, count: dungeonWidth), count: dungeonHeight)
         
         super.init(texture: nil, color: UIColor.clear, size: CGSize(width: dungeonWidth * 80, height: dungeonHeight * 80))
         
-        let floorNode = SKSpriteNode(texture: wallTexture, color: UIColor.clear, size: wallTexture.size())
-        let wallNode = SKSpriteNode(texture: wallTexture, color: UIColor.clear, size: wallTexture.size())
-               wallNode.position = CGPoint(x: 0, y: 0) // Установите позицию стены
+        let floorNode = SKSpriteNode(texture: floorTexture, color: UIColor.clear, size: floorTexture.size())
+        
+        let wallVTexture = SKSpriteNode(texture: wallVertTexture, color: UIColor.clear, size: wallVertTexture.size())
+        
+        let wallHTexture = SKSpriteNode(texture: wallHorTexture, color: UIColor.clear, size: wallHorTexture.size())
+        
+//        wallNode.position = CGPoint(x: 0, y: 0) // Установите позицию стены
 //               self.addChild(wallNode) // Добавляем стену как дочерний узел
     }
     
@@ -115,8 +121,15 @@ class DungeonScene: SKSpriteNode {
                 if cell == "0" || cell == "#" {
                     dungeonScene[i][j] = floorTexture
                 } else if cell == "1" {
-                    dungeonScene[i][j] = wallTexture
-                } else {
+                    dungeonScene[i][j] = wallHorTexture
+
+                       
+
+                } else if cell == "2" {
+                    dungeonScene[i][j] = wallVertTexture
+                }
+                
+                else {
                     continue
                 }
                 
@@ -130,4 +143,5 @@ class DungeonScene: SKSpriteNode {
             }
         }
     }
+
 }
