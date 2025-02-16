@@ -13,8 +13,9 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     override func didMove(to view: SKView) {
-        self.size = CGSize(width: 3000, height: 3000)
+        self.size = CGSize(width: 2000, height: 2000)
         setSetting()
+        
     
         var newDungeon = Dungeon()
         generateDungeon(newDungeon)
@@ -25,9 +26,36 @@ class GameScene: SKScene {
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         view.addGestureRecognizer(panGesture)
-
+//        setGhost()
         
     }
+    
+
+//    func setGhost() {
+//        let offsetX: CGFloat = 0
+//        let offsetY: CGFloat = 0
+//        
+//        var ghost: SKTexture = SKTexture(imageNamed: "ghost")
+//        var knight: SKTexture = SKTexture(imageNamed: "knight")
+//        let cellSize = CGSize(width: 50, height: 50) // Размер спрайта
+//        
+//        
+//        let cellNodeGhost = SKSpriteNode(texture: ghost, color: .clear, size: cellSize)
+//        let cellNodeKnight = SKSpriteNode(texture: knight, color: .clear, size: cellSize)
+//        
+//        cellNodeGhost.position = CGPoint(
+//            x: CGFloat(cellSize.width + 1) + offsetX, // +1 для расстояния в 1 пиксель
+//            y: CGFloat(cellSize.height + 1) + offsetY // +1 для расстояния в 1 пиксель
+//        )
+//        cellNodeKnight.position = CGPoint(
+//            x: CGFloat(cellSize.width + 30) + offsetX, // +1 для расстояния в 1 пиксель
+//            y: CGFloat(cellSize.height + 30) + offsetY // +1 для расстояния в 1 пиксель
+//        )
+//
+//        self.addChild(cellNodeGhost)
+//        self.addChild(cellNodeKnight)
+//    }
+    
 
     @objc func handlePan(_ gesture: UIPanGestureRecognizer) {
 //        сбрасывает смещение, чтобы следующее движение начиналось с нуля
@@ -93,11 +121,11 @@ class DungeonScene: SKSpriteNode {
         
         super.init(texture: nil, color: UIColor.clear, size: CGSize(width: dungeonWidth * 80, height: dungeonHeight * 80))
         
-        let floorNode = SKSpriteNode(texture: floorTexture, color: UIColor.clear, size: floorTexture.size())
-        
-        let wallVTexture = SKSpriteNode(texture: wallVertTexture, color: UIColor.clear, size: wallVertTexture.size())
-        
-        let wallHTexture = SKSpriteNode(texture: wallHorTexture, color: UIColor.clear, size: wallHorTexture.size())
+//        let floorNode = SKSpriteNode(texture: floorTexture, color: UIColor.clear, size: floorTexture.size())
+//        
+//        let wallVTexture = SKSpriteNode(texture: wallVertTexture, color: UIColor.clear, size: wallVertTexture.size())
+//        
+//        let wallHTexture = SKSpriteNode(texture: wallHorTexture, color: UIColor.clear, size: wallHorTexture.size())
         
 //        wallNode.position = CGPoint(x: 0, y: 0) // Установите позицию стены
 //               self.addChild(wallNode) // Добавляем стену как дочерний узел
@@ -107,39 +135,78 @@ class DungeonScene: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
+//    func printRoomsScene(_ dungeon: Dungeon) {
+//        let cellSize = CGSize(width: 50, height: 50)
+//        
+//        let offsetX: CGFloat = 0
+//        let offsetY: CGFloat = 0
+//        
+//        let printDungeon = PrintDungeon(dungeon)
+//        
+//        for i in 0..<printDungeon.dungeonGrid.count {
+//            for j in 0..<printDungeon.dungeonGrid.count {
+//                let cell = printDungeon.dungeonGrid[i][j]
+//                var texture: SKTexture
+//                
+//                switch cell {
+//                case "0", "#":
+//                    texture = floorTexture
+//                case "1":
+//                    texture = wallHorTexture
+//                case "2":
+//                    texture = wallVertTexture
+//                default:
+//                    continue
+//                }
+//                
+//                let cellNode = SKSpriteNode(texture: dungeonScene[i][j], color: .clear, size: cellSize)
+//                           // Применяем смещение к позиции узла
+//                           cellNode.position = CGPoint(
+//                               x: CGFloat(j) * cellSize.width + offsetX,
+//                               y: CGFloat(i) * cellSize.height + offsetY
+//                           )
+//                           self.addChild(cellNode)
+//            }
+//        }
+//    }
+    
+    
     func printRoomsScene(_ dungeon: Dungeon) {
-        let cellSize = CGSize(width: 50, height: 50)
-        
+        let cellSize = CGSize(width: 10, height: 10) // Размер спрайта
+
+        // Смещение для центрирования или начальной позиции
         let offsetX: CGFloat = -1000
         let offsetY: CGFloat = -1000
-        
+
         let printDungeon = PrintDungeon(dungeon)
-        
-        for i in 0..<printDungeon.dungeonGrid.count - 1 {
-            for j in 0..<printDungeon.dungeonGrid.count - 1 {
+
+        for i in 0..<printDungeon.dungeonGrid.count {
+            for j in 0..<printDungeon.dungeonGrid[i].count {
                 let cell = printDungeon.dungeonGrid[i][j]
-                if cell == "0" || cell == "#" {
-                    dungeonScene[i][j] = floorTexture
-                } else if cell == "1" {
-                    dungeonScene[i][j] = wallHorTexture
+                var texture: SKTexture
 
-                       
-
-                } else if cell == "2" {
-                    dungeonScene[i][j] = wallVertTexture
-                }
-                
-                else {
+                switch cell {
+                case "0", "#":
+                    texture = floorTexture
+                case "1":
+                    texture = wallHorTexture
+                case "2":
+                    texture = wallVertTexture
+                default:
                     continue
                 }
-                
-                let cellNode = SKSpriteNode(texture: dungeonScene[i][j], color: .clear, size: cellSize)
-                           // Применяем смещение к позиции узла
-                           cellNode.position = CGPoint(
-                               x: CGFloat(j) * cellSize.width + offsetX,
-                               y: CGFloat(i) * cellSize.height + offsetY
-                           )
-                           self.addChild(cellNode)
+
+                // Создаем спрайт с текстурой
+                let cellNode = SKSpriteNode(texture: texture, color: .clear, size: cellSize)
+
+                // Устанавливаем позицию спрайта с учетом размера и смещения
+                cellNode.position = CGPoint(
+                    x: CGFloat(j) * (cellSize.width) + offsetX, // +1 для расстояния в 1 пиксель
+                    y: CGFloat(i) * (cellSize.height) + offsetY // +1 для расстояния в 1 пиксель
+                )
+
+
+                self.addChild(cellNode)
             }
         }
     }
