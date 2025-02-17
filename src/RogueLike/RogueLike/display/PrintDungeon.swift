@@ -17,10 +17,12 @@ class PrintDungeon {
         
         printRooms(dungeon)
         printCorridors(dungeon)
-        
-        
+
     }
-    
+    /// *****************************FUNCTIONS ******************************
+
+
+    /// ---------------------------------------- ROOMS ----------------------------------------
     func printRooms(_ dungeon: Dungeon) {
         
         for i in 1..<ROOMS_PER_SIDE + 1 {
@@ -46,6 +48,7 @@ class PrintDungeon {
         }
     }
     
+    /// ---------------------------------------- CORRIDORS ----------------------------------------
     func printCorridors(_ dungeon: Dungeon) {
         
         for i in 1..<ROOMS_PER_SIDE + 1 {
@@ -81,6 +84,7 @@ class PrintDungeon {
         }
     }
     
+    /// ---------------------------------------- DOORS ----------------------------------------
     func printDoors(_ room: Room) {
         
         for d in 0..<4 {
@@ -123,7 +127,4 @@ class PrintDungeon {
             }
         }
     }
-    
-    
-    
 }

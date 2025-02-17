@@ -67,20 +67,52 @@
 		21117C982D40F059004C64BC /* RogueLike */ = {
 			isa = PBXGroup;
 			children = (
-				FD0A06FD2D46955300A42BE9 /* Constants.swift */,
-				FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */,
-				FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */,
-				FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */,
+				FD9017012D63731300B746F9 /* constants */,
+				FD9017002D63730300B746F9 /* classes */,
+				FD9017022D63748500B746F9 /* dundeon */,
+				FD9017032D6374AF00B746F9 /* display */,
 				21117C992D40F059004C64BC /* AppDelegate.swift */,
 				21117C9B2D40F059004C64BC /* GameScene.sks */,
 				21117C9D2D40F059004C64BC /* Actions.sks */,
-				21117C9F2D40F059004C64BC /* GameScene.swift */,
 				21117CA12D40F059004C64BC /* GameViewController.swift */,
 				21117CA32D40F059004C64BC /* Main.storyboard */,
 				21117CA62D40F05C004C64BC /* Assets.xcassets */,
 				21117CA82D40F05C004C64BC /* LaunchScreen.storyboard */,
 			);
 			path = RogueLike;
+			sourceTree = "<group>";
+		};
+		FD9017002D63730300B746F9 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */,
+			);
+			path = classes;
+			sourceTree = "<group>";
+		};
+		FD9017012D63731300B746F9 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				FD0A06FD2D46955300A42BE9 /* Constants.swift */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		FD9017022D63748500B746F9 /* dundeon */ = {
+			isa = PBXGroup;
+			children = (
+				FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */,
+			);
+			path = dundeon;
+			sourceTree = "<group>";
+		};
+		FD9017032D6374AF00B746F9 /* display */ = {
+			isa = PBXGroup;
+			children = (
+				FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */,
+				21117C9F2D40F059004C64BC /* GameScene.swift */,
+			);
+			path = display;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

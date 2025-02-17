@@ -30,7 +30,8 @@ class Dungeon {
         roomCount = 0
         corridorsCount = 0
     }
-    /// ---------------------------------------- FUNCTIONS ----------------------------------------
+    /// *****************************FUNCTIONS ******************************
+
     func initDungeon() {
         roomCount = 0
         for i in 0..<ROOMS_PER_SIDE + 2 {
@@ -173,7 +174,6 @@ class Dungeon {
             room.doors[TOP].y = room.topLeft.y
             room.doors[TOP].x = Int.random(in: 0..<room.botRight.x - room.topLeft.x - 1) + room.topLeft.x + 1
         }
-        
         if(room.connections[RIGHT] != nil) {
             room.doors[RIGHT].y = Int.random(in:0..<room.botRight.y - room.topLeft.y - 1) + room.topLeft.y + 1
             room.doors[RIGHT].x = room.botRight.x
@@ -202,8 +202,6 @@ class Dungeon {
                     let corridor = corridors[corridorsCount]
                     
                     generateLeftToRightCorridor(currentRoom, rightRoom, corridor)
-                    
-                    //                    corridors[corridorsCount] = corridor
                     corridorsCount += 1
                 }
                 
@@ -223,7 +221,6 @@ class Dungeon {
                     } else {
                         generateTopToBottomCorridor(currentRoom, bottomRoom, corridor)
                     }
-                    //                    corridors[corridorsCount] = corridor
                     corridorsCount += 1
                 }
             }
