@@ -51,9 +51,22 @@ let UNOCCUPIED = 0
 let OCCUPIED = 1
 
 let PLAYER = 0
+let PLAYER_CHAR: Character = "@"
 let EXIT = 1
+let EXIT_CHAR: Character = "|"
 let ENEMY = 2
 let ITEM = 3
+
+let WALL_CHAR_HORISONTAL: Character = "-"
+let WALL_CHAR_VERTICAL: Character = "|"
+
+let CORRIDOR_CHAR: Character = "+"
+let OUTER_AREA_CHAR: Character = "."
+let INNER_AREA_CHAR: Character = " "
+let EMPTY_CHAR: Character = " "
+//собственные введения не из code samples
+let DOOR: Character = "D"
+
 
 let IS_OUTER = 0
 let IS_INNER = 1

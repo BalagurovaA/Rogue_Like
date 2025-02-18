@@ -24,6 +24,7 @@ class Dungeon {
         let roomPerSide: Int = 3
         let totalRooms = roomPerSide + 2
         rooms = Array(repeating: Array(repeating: Room(), count: totalRooms), count: totalRooms)
+        
         corridors = Array(repeating: Corridor(), count: MAX_CORRIDORS_NUMBER)
         sequence = Array(repeating: nil, count: MAX_ROOMS_NUMBER)
         

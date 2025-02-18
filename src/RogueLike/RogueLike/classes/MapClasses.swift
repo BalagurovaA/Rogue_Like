@@ -1,4 +1,18 @@
 import Foundation
+/// ---------------------------------------- ENTITY ----------------------------------------
+class Entity {
+    var type: Int
+    var symbol: Int
+    var position: (x: Int, y: Int)
+    
+    init() {
+        type = 0
+        symbol = 0
+        position = (0, 0)
+    }
+    
+}
+
 
 /// ---------------------------------------- ROOM ----------------------------------------
 class Room: Equatable {
@@ -23,6 +37,7 @@ class Room: Equatable {
     var enitiesCount: Int
     
     var connections: [Room?]
+    var entities: [Entity]
     
     var topLeft: (x: Int, y: Int)
     var botRight: (x: Int, y: Int)
@@ -35,6 +50,7 @@ class Room: Equatable {
         grid_j = 0
         connections = Array(repeating: nil, count: 4)/*как комнаты будут соединяться*/ /*[TOP, RIGHT, BOTTOM, LEFT]*/
         doors = Array(repeating: (-1, -1), count: 4)
+        entities = Array(repeating: Entity(), count: MAX_ENTITIES_PER_ROOM)
         enitiesCount = 0
         
         topLeft = (-1, -1)
@@ -54,22 +70,8 @@ class Corridor {
         points = [(x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0), (x: 0, y: 0)]
         pointsCount = UNINITIALIZED
     }
-    
 }
 
-/// ---------------------------------------- ENTITY ----------------------------------------
-class Entity {
-    var type: Int
-    var symbol: Int
-    var position: (x: Int, y: Int)
-    
-    init() {
-        type = 0
-        symbol = 0
-        position = (x: 0, y: 0)
-    }
-    
-}
 
 /// ---------------------------------------- MAP ----------------------------------------
 //class Map {

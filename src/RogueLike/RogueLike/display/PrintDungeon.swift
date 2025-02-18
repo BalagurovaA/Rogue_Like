@@ -5,6 +5,8 @@
 //  Created by Kristofer Sartorial on 2/14/25.
 //
 
+//dungeon map translation
+
 import Foundation
 class PrintDungeon {
     

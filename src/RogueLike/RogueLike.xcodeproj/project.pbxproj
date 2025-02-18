@@ -17,6 +17,7 @@
 		21117CAA2D40F05C004C64BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21117CA82D40F05C004C64BC /* LaunchScreen.storyboard */; };
 		FD0A06FE2D46955300A42BE9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0A06FD2D46955300A42BE9 /* Constants.swift */; };
 		FD2878E02D5FB27500E0FE67 /* PrintDungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */; };
+		FD647EA92D64AE1100ED72C1 /* DundeonToMapTranslation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD647EA82D64AE1100ED72C1 /* DundeonToMapTranslation.swift */; };
 		FDE4D7822D5D0A9D00EBD537 /* MapClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */; };
 		FDF93DBC2D4FDCA2008D73CF /* DungeonGeneration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		21117CA92D40F05C004C64BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD0A06FD2D46955300A42BE9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintDungeon.swift; sourceTree = "<group>"; };
+		FD647EA82D64AE1100ED72C1 /* DundeonToMapTranslation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DundeonToMapTranslation.swift; sourceTree = "<group>"; };
 		FDE4D7812D5D0A9D00EBD537 /* MapClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapClasses.swift; sourceTree = "<group>"; };
 		FDF93DBB2D4FDCA2008D73CF /* DungeonGeneration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonGeneration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 			children = (
 				FD2878DF2D5FB27500E0FE67 /* PrintDungeon.swift */,
 				21117C9F2D40F059004C64BC /* GameScene.swift */,
+				FD647EA82D64AE1100ED72C1 /* DundeonToMapTranslation.swift */,
 			);
 			path = display;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				FD2878E02D5FB27500E0FE67 /* PrintDungeon.swift in Sources */,
 				21117CA22D40F059004C64BC /* GameViewController.swift in Sources */,
 				21117C9A2D40F059004C64BC /* AppDelegate.swift in Sources */,
+				FD647EA92D64AE1100ED72C1 /* DundeonToMapTranslation.swift in Sources */,
 				FDF93DBC2D4FDCA2008D73CF /* DungeonGeneration.swift in Sources */,
 				FD0A06FE2D46955300A42BE9 /* Constants.swift in Sources */,
 			);
