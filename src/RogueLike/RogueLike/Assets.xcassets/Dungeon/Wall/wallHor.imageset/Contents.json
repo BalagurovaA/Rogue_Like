@@ -6,10 +6,12 @@
       "scale" : "1x"
     },
     {
+      "filename" : "wallHor 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "wallHor 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
